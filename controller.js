@@ -121,12 +121,24 @@ var executeQuery = require('./respon')
 
 // Tabel Jasa Layanan 
 		
-		exports.jasa = function (req, rs) {
+		exports.jasaGet = function (req, rs) {
 			var query  = "SELECT * FROM bpdlogin.dbo.jasalayanan_menu";
 			executeQuery (rs, query)
 		}
 
 		exports.jasaGetbyID = function (req, rs) {
 			var query  = "SELECT * FROM bpdlogin.dbo.jasalayanan_menu WHERE id=" +req.params.id;
+			executeQuery (rs, query)
+		}	
+
+	// Tabel Kredit Menu 
+		
+		exports.kreditGet = function (req, rs) {
+			var query  = "SELECT * FROM bpdlogin.dbo.kredit_menu";
+			executeQuery (rs, query)
+		}
+
+		exports.kreditGetbyID = function (req, rs) {
+			var query  = "SELECT * FROM bpdlogin.dbo.kredit_menu WHERE id=" +req.params.id;
 			executeQuery (rs, query)
 		}	
