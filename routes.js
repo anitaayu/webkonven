@@ -62,6 +62,12 @@ module.exports = function(app) {
        .get(coba.jasaGet);
     app.route('/jasa/:id')
        .get(coba.GetbyID);
+
+   //Route Kredit Menu
+    app.route('/kredit')
+       .get(coba.kreditGet);
+    app.route('/jasa/:id')
+       .get(coba.kreditbyID);
 };
 
 
