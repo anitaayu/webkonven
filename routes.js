@@ -61,13 +61,13 @@ module.exports = function(app) {
     app.route('/jasa')
        .get(coba.jasaGet);
     app.route('/jasa/:id')
-       .get(coba.GetbyID);
+       .get(coba.jasaGetbyID);
 
    //Route Kredit Menu
     app.route('/kredit')
        .get(coba.kreditGet);
-    app.route('/jasa/:id')
-       .get(coba.kreditbyID);
+    app.route('/kredit/:id')
+       .get(coba.kreditGetbyID);
 };
 
 
