@@ -83,6 +83,11 @@ var executeQuery = require('./respon')
 			executeQuery (rs, query)
 		}	
 
+		exports.beritaGetbyID = function (req, rs) {
+			var query  = "SELECT * FROM bpdlogin.dbo.berita_menu WHERE id= " +req.params.id;
+			executeQuery (rs, query)
+		}
+
 // Tabel Dewan 
 		
 		exports.dewanGet = function (req, rs) {
@@ -131,7 +136,7 @@ var executeQuery = require('./respon')
 			executeQuery (rs, query)
 		}	
 
-	// Tabel Kredit Menu 
+// Tabel Kredit Menu 
 		
 		exports.kreditGet = function (req, rs) {
 			var query  = "SELECT * FROM bpdlogin.dbo.kredit_menu";
@@ -142,3 +147,38 @@ var executeQuery = require('./respon')
 			var query  = "SELECT * FROM bpdlogin.dbo.kredit_menu WHERE id=" +req.params.id;
 			executeQuery (rs, query)
 		}	
+
+// Tabel Laporan Menu 
+		
+	exports.laporanGet = function (req, rs) {
+		var query  = "SELECT * FROM bpdlogin.dbo.laporan_menu";
+		executeQuery (rs, query)
+	}
+
+	exports.laporanGetbyID = function (req, rs) {
+		var query  = "SELECT * FROM bpdlogin.dbo.laporan_menu WHERE id=" +req.params.id;
+		executeQuery (rs, query)
+	}	
+// Tabel Layanan Menu 
+		
+	exports.layananGet = function (req, rs) {
+		var query  = "SELECT * FROM bpdlogin.dbo.layanan_menu";
+		executeQuery (rs, query)
+	}
+
+	exports.layananGetbyID = function (req, rs) {
+		var query  = "SELECT * FROM bpdlogin.dbo.layanan_menu WHERE id=" +req.params.id;
+		executeQuery (rs, query)
+	}	
+
+// Tabel Pemegang Saham 
+		
+	exports.sahamGet = function (req, rs) {
+		var query  = "SELECT * FROM bpdlogin.dbo.pemegang_saham";
+		executeQuery (rs, query)
+	}
+
+	exports.sahamGetbyID = function (req, rs) {
+		var query  = "SELECT * FROM bpdlogin.dbo.pemegang_saham WHERE id=" +req.params.id;
+		executeQuery (rs, query)
+	}	
