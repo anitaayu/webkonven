@@ -68,6 +68,24 @@ module.exports = function(app) {
        .get(coba.kreditGet);
     app.route('/kredit/:id')
        .get(coba.kreditGetbyID);
+
+   //Route Laporan Menu
+   app.route('/laporan')
+   .get(coba.laporanGet);
+   app.route('/laporan/:id')
+   .get(coba.laporanGetbyID);
+
+   //Route Layanan Menu
+   app.route('/layanan')
+   .get(coba.layananGet);
+   app.route('/layanan/:id')
+   .get(coba.layananGetbyID);
+
+   //Route Pemegang Saham
+   app.route('/saham')
+   .get(coba.sahamGet);
+   app.route('/saham/:id')
+   .get(coba.sahamGetbyID);
 };
 
 
